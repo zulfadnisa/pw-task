@@ -1,0 +1,134 @@
+<!DOCTYPE>
+<html>
+<head>
+<style href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/table.min.css"></style>
+<style>
+.hide{
+  opacity: 0;
+}
+fieldset{
+  background-color: ghostwhite;
+}
+legend{
+  width: 200px;
+  height:20px;
+  border-style: groove;
+  border-radius:4px;
+  background-color: white;
+}
+input[type=text] {
+    width: 100%;
+    padding:5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type=date]{
+    width: 100%;
+    padding:5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    width: 100%;
+    height: 90px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+</style>
+<script>
+var form= document.getElementById('form');
+form.onsubmit = function(a){
+  a.preventDefault();
+  var hasil = document.getElementById('hasil');
+  var nama = document.getElementById('nama');
+  var nim = document.getElementById('nim');
+  var tl = document.getElementById('tl');
+  var tgl = document.getElementById('tgl');
+  var jk = document.getElementById('jk');
+  var alamat= document.getElementById('alamat');
+  
+  //form
+  nama.innerHTML = form.nama.value;
+  nim.innerHTML = form.nim.value;
+  tl.innerHTML = form.tl.value;
+  tgl.innerHTML = form.tgl.value;
+  jk.innerHTML = form.jk.value;
+  alamat.innerHTML = form.alamat.value;
+  
+  //tampilan
+  hasil.classList.remove("hide");
+  this.reset(); 
+}
+</script>
+</head>
+<body>
+  <form id="form" method="post">
+<fieldset>
+  <legend style="text-align:center"><b>FORM MAHASISWA</b></legend>
+  <p><label>Nama</label><br>
+     <input type="text" name="nama" style="width:100%">
+  </p>
+  <p>
+    <label>NIM</label><br>
+    <input type="text" name="nim" style="width:100%">
+  </p>
+  <p>
+    <label>Tempat Lahir</label><br>
+    <input type="text" name="tl" style="width:100%">
+  </p>
+  <p>
+    <label>Tanggal Lahir</label><br>
+    <input type="date" name="tgl" style="width:100%">
+  </p>
+  <p>
+     <label>Jenis Kelamin</label><br>
+     <label><input type="radio" name="jk" value="Laki - Laki">Laki - laki</label>
+     <label><input type="radio" name="jk" value="Perempuan">Perempuan</label>
+  </p>
+  <p>
+    <label>Alamat</label><br>
+    <textarea name="alamat" style="width:100%"></textarea>
+  </p>
+  <input type="submit" value="Send">
+  <input type="reset">
+</fieldset>
+</form><br>
+
+<div id="hasil" class="hide">
+  <h3 style="text-align:center">Data Mahasiswa</h3>
+  <table class="ui very basic table">
+    <tr>
+      <td>Nama  Mahasiswa: </td>
+      <td id="nama"></td>
+    </tr>
+    <tr>
+      <td>NIM : </td>
+      <td id="nim"></td>
+    </tr>
+    <tr>
+      <td>Tempat Lahir : </td>
+      <td id="tl"></td>
+    </tr>
+    <tr>
+      <td>Tanggal Lahir : </td>
+      <td id="tgl"></td>
+    </tr>
+    <tr>
+      <td>Jenis Kelamin : </td>
+      <td id="jk"></td>
+    </tr>
+    <tr>
+      <td>Alamat : </td>
+      <td id="alamat"></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
