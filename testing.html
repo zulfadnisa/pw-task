@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <link href="favicon-z.jpg" rel="icon">
+    <link href="external.css" rel="stylesheet" type="text/css">
+    <style>
+        /*@import url("external.css"); Disarankan pake link untuk external*/
+        input[type="text"]{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <fieldset class="form">
+        <legend>REGISTRASI</legend>
+        <form method="GET" action="" id="registrasi">
+            <table id="iseng">
+                <tr>
+                    <td>Username </td>
+                    <td>
+                        <input type="text" name="username" maxlength="10" placeholder="huruf kecil" pattern="[a-z]+" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E-mail </td>
+                    <td>
+                        <input type="email" name="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nama </td>
+                    <td>
+                        <input type="text" name="nama" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tanggal lahir</td>
+                    <td><input type="date" name="tgl" min="1995-01-01" max="2000-12-31"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="daftar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <h4 title="link">Link</h4>
+    <ul>
+        <li><a href="xxxxx.jp" target="_blank">About</a></li>
+        <li><a href="http://ainisaku.blogspot.com" target="_blank" title="Blog">Blog</a></li>
+        <li><a href="lalala.com" target="_blank" title="Blog Ainisaku">Blog Ainisaku</a></li>
+        <li><a href="xxxxx" target="_blank" title="Twitter">Twitter</a></li>
+    </ul>
+    <hr>
+    <address>
+        Pertanyaan? <a href="http://ainisaku.blogspot.com" target="_blank">click</a>
+    </address>
+</body>
+</html>
