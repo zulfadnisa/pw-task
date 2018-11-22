@@ -1,0 +1,33 @@
+        /* Mengubah semuanya
+        *{color:darkcyan;}
+        */
+        body{
+            background-color:azure;
+        }
+        .form{
+            color: darkgreen;
+            font-family: sans-serif;
+            font-size: 24px;
+            width: 300px;
+        }
+        #iseng{
+            font-size: 16px;
+        }
+        [href]{
+            color: cadetblue;
+        }
+        h4[title]{
+            color: forestgreen;
+        }
+        [title~="Blog"]{ /*yang ada kata blog*/
+            color: goldenrod;
+        }
+        [title*="ter"]{ /*yang ada ter*/
+            color: darksalmon;
+        }
+        [href^="http"]{ /*yang ada diawal http*/
+            color: burlywood;
+        }
+        [href$=".jp"]{ /*yang ada diakhir .jp*/
+            color: darkkhaki;
+        }
